@@ -1,4 +1,11 @@
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 function Others() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
   const others = [
     {
       id: "04",
@@ -155,6 +162,16 @@ function Others() {
     },
   ];
 
+  const lightboxSlides = others
+    .filter((w) => w.imgLarge)
+    .map((w) => ({ src: w.imgLarge }));
+
+  const handleOpen = (work) => {
+    const index = lightboxSlides.findIndex((s) => s.src === work.imgLarge);
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <section className="wrapWorks" id="others">
       <h2 className="ttlMiddle">
@@ -166,13 +183,13 @@ function Others() {
             <div className="wrapSet">
               <div className="imgArea">
                 <div className="imgArea_i">
-                  <a href={work.imgLarge} className="btnView" data-imagelightbox="lb">
+                  <div className="btnView" onClick={() => handleOpen(work)} style={{ cursor: "pointer" }}>
                     <p className="label_view"><span className="icon">VIEW</span></p>
                     <ul className="lstCategory">
                       {work.categories.map((c) => <li key={c}>{c}</li>)}
                     </ul>
                     <img src={work.img} alt="" />
-                  </a>
+                  </div>
                 </div>
                 <div className="wrapCharge"><p>{work.charge}</p></div>
               </div>
@@ -214,6 +231,13 @@ function Others() {
           </section>
         ))}
       </div>
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={lightboxSlides}
+        index={lightboxIndex}
+      />
     </section>
   );
 }

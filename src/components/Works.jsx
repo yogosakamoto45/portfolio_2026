@@ -1,11 +1,10 @@
-import { useEffect } from "react";
+import { useState } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
 function Works() {
-  useEffect(() => {
-    if (window.$ && window.$.fn.imageLightbox) {
-      $("[data-imagelightbox='lb']").imageLightbox();
-    }
-  }, []);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const works = [
     {
@@ -85,6 +84,17 @@ function Works() {
     },
   ];
 
+  const lightboxSlides = works
+    .filter((w) => w.imgLarge)
+    .map((w) => ({ src: w.imgLarge }));
+
+  const handleOpen = (work) => {
+    if (!work.imgLarge) return;
+    const index = lightboxSlides.findIndex((s) => s.src === work.imgLarge);
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <section className="wrapWorks" id="works">
       <h2 className="ttlMiddle">
@@ -97,13 +107,13 @@ function Works() {
               <div className="imgArea">
                 <div className="imgArea_i">
                   {work.imgLarge ? (
-                    <a href={work.imgLarge} className="btnView" data-imagelightbox="lb">
+                    <div className="btnView" onClick={() => handleOpen(work)} style={{ cursor: "pointer" }}>
                       <p className="label_view"><span className="icon">VIEW</span></p>
                       <ul className="lstCategory">
                         {work.categories.map((c) => <li key={c}>{c}</li>)}
                       </ul>
                       <img src={work.img} alt="" />
-                    </a>
+                    </div>
                   ) : (
                     <>
                       <ul className="lstCategory">
@@ -115,7 +125,6 @@ function Works() {
                 </div>
                 <div className="wrapCharge"><p>{work.charge}</p></div>
               </div>
-
               <div className="txtArea">
                 <h3 className="workTtl">
                   <span className="workTtlNum">
@@ -155,6 +164,13 @@ function Works() {
           </section>
         ))}
       </div>
+
+      <Lightbox
+        open={lightboxOpen}
+        close={() => setLightboxOpen(false)}
+        slides={lightboxSlides}
+        index={lightboxIndex}
+      />
     </section>
   );
 }

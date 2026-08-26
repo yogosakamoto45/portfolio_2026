@@ -129,7 +129,7 @@ header.isScrolled{
 
 .readTxtArea{
     position: relative;
-    background: url(../img/img_top-bg03.jpg) no-repeat;
+    background: url(/img/img_top-bg03.jpg) no-repeat;
     min-height: 500px;
     height: calc(100vh - 94px);
     background-size: cover;
@@ -458,7 +458,7 @@ header.isScrolled{
     left: 0;
     width: 15px;
     height: 14px;
-    background:url('../img/icon_search.svg') no-repeat ;
+    background:url('/img/icon_search.svg') no-repeat ;
     background-size: 15px 14px;
     transform: translateY(-50%) ;
     content: '';
@@ -486,7 +486,7 @@ header.isScrolled{
 }
 
 .btnView:hover .label_view .icon::before {
-      background-image: url('../img/icon_search_mo.svg'); 
+      background-image: url('/img/icon_search_mo.svg'); 
       transition: all .4s;
 }
 
