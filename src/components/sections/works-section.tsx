@@ -65,7 +65,6 @@ const works: WorkItem[] = [
     approaches: [
       { label: "一貫したブランド設計", description: "専門性を感じさせるトーン＆マナーを統一。" },
       { label: "CMSカスタマイズ", description: "Movable Typeをベースに、必要な機能を備えたテンプレートを作成。" },
-      { label: "視覚的情報訴求", description: "図解・イラストを活用し、専門的内容をわかりやすく表現。" },
     ],
     roles: ["制作ディレクション", "デザイン", "コーディング", "CMS構築"],
     thumbnail: "http://sakamoto45.stars.ne.jp/img/media_pc.webp",
