@@ -9,8 +9,8 @@ function Works() {
   const works = [
     {
       id: "01",
-      img: "img/thum-ks-plus.png",
-      imgLarge: "img/thum-ks-plus_L.jpg",
+      img: "img/thum-ks-plus_S.png",
+      imgLarge: "img/thum-ks-plus_L.png",
       categories: ["App", "SP", "PC"],
       charge: "コンポーネント設計/デザインカンプ作成/品質管理/デザインレビュー・ファシリテーション",
       icon: (
@@ -34,8 +34,8 @@ function Works() {
     },
     {
       id: "02",
-      img: "img/thum-ydx2.png",
-      imgLarge: "img/thum-ydx_L.jpg",
+      img: "img/thum-ydx_S.png",
+      imgLarge: "img/thum-ydx_L.png",
       categories: ["SP", "PC"],
       charge: "UI/UX設計（サイトマップ/ジャーニーマップ/ワイヤーフレーム/デザインカンプ）",
       icon: (

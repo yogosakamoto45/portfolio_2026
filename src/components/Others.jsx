@@ -9,8 +9,8 @@ function Others() {
   const others = [
     {
       id: "04",
-      img: "img/thum-pro-mz2.png",
-      imgLarge: "img/thum-pro-mz_L.jpg",
+      img: "img/thum-pro-mz_S.png",
+      imgLarge: "img/thum-pro-mz_L.png",
       categories: ["SP", "PC"],
       charge: "CMSカスタマイズ/制作ディレクション（デザイン・コーディング）/品質管理",
       icon: (
@@ -30,8 +30,8 @@ function Others() {
     },
     {
       id: "05",
-      img: "img/thum-baitoru2.png",
-      imgLarge: "img/thum-baitoru_L.jpg",
+      img: "img/thum-baitoru_S.png",
+      imgLarge: "img/thum-baitoru_L.png",
       categories: ["App"],
       charge: "UIデザイン/デザインレビュー/UIコンポーネントの策定",
       icon: (
@@ -52,8 +52,8 @@ function Others() {
     },
     {
       id: "06",
-      img: "img/thum-prc_asp2.png",
-      imgLarge: "img/thum-prc_asp_L.jpg",
+      img: "img/thum-prc_asp_S.png",
+      imgLarge: "img/thum-prc_asp_L.png",
       categories: ["PC"],
       charge: "情報設計/デザイン/コーディング（HTML・CSS・JavaScript）",
       icon: (
@@ -72,8 +72,8 @@ function Others() {
     },
     {
       id: "07",
-      img: "img/thum-hpy2.png",
-      imgLarge: "img/thum-hpy_L.jpg",
+      img: "img/thum-hpy_S.png",
+      imgLarge: "img/thum-hpy_L.png",
       categories: ["SP", "PC"],
       charge: "情報設計/デザイン/コーディング（HTML・CSS・JavaScript）",
       icon: (
@@ -94,8 +94,8 @@ function Others() {
     },
     {
       id: "08",
-      img: "img/thum-ffs2.png",
-      imgLarge: "img/thum-ffs_L.jpg",
+      img: "img/thum-ffs_S.png",
+      imgLarge: "img/thum-ffs_L.png",
       categories: ["SP", "PC"],
       charge: "スケジュール管理/情報設計/アートディレクション/ビジュアル・デザイン/コーディング（HTML・CSS・JavaScript）/Word Pressカスタマイズ",
       icon: (
@@ -116,8 +116,8 @@ function Others() {
     },
     {
       id: "09",
-      img: "img/thum-aburaya2.png",
-      imgLarge: "img/thum-aburaya_L.jpg",
+      img: "img/thum-aburaya_S.png",
+      imgLarge: "img/thum-aburaya_L.png",
       categories: ["SP", "PC"],
       charge: "スケジュール管理/情報設計/アートディレクション/UIデザイン/コーディング（HTML・CSS・JavaScript）/社内CMSカスタマイズ",
       icon: (
@@ -136,6 +136,7 @@ function Others() {
       ],
       link: "https://www.ine-aburaya.com/index.php",
     },
+   /* 非公開  
     {
       id: "10",
       img: "img/thum-furdi2.png",
@@ -159,6 +160,7 @@ function Others() {
       ],
       link: "https://furdi.jp/",
     },
+    */
   ];
 
   const lightboxSlides = others
