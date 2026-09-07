@@ -109,9 +109,9 @@ function Works() {
                   {work.imgLarge ? (
                     <div className="btnView" onClick={() => handleOpen(work)} style={{ cursor: "pointer" }}>
                       <p className="label_view"><span className="icon">VIEW</span></p>
-                      <ul className="lstCategory">
+                      {/* 非公開 <ul className="lstCategory">
                         {work.categories.map((c) => <li key={c}>{c}</li>)}
-                      </ul>
+                      </ul>*/}
                       <img src={work.img} alt="" />
                     </div>
                   ) : (
