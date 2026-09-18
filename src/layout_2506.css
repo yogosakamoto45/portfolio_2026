@@ -959,7 +959,7 @@ footer .copyrightTxt{
     width: 50px;
     height: 50px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--color-background-primary);
     text-align: center;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
     z-index: 15;
@@ -967,7 +967,8 @@ footer .copyrightTxt{
 
 #pageTopBtn:hover{
     cursor: pointer;
-    opacity: .6;
+    /*opacity: .6;*/
+    background-color: var(--color-link-primary);
     transition: all .8s;
 }
 
@@ -984,7 +985,7 @@ footer .copyrightTxt{
     right: 23px;
     width: 9px;
     height: 3px;
-    background-color: var(--color-text-primary);
+    background-color: var(--color-link-primary);
     transform: rotate(-45deg);
     content: "";
 }
@@ -996,10 +997,13 @@ footer .copyrightTxt{
     right: 18px;
     width: 9px;
     height: 3px;
-    background-color: var(--color-text-primary);
+    background-color: var(--color-link-primary);
     transform: rotate(45deg);
     content: "";
 }
+
+#pageTopBtn:hover span::before,
+#pageTopBtn:hover span::after {background-color: var(--color-background-primary);}
 
 .sa {
     opacity: 0;
@@ -1029,8 +1033,6 @@ footer .copyrightTxt{
 .wrapOuter .cardIcon{
     display: flex;
     margin: 0 0 20px;
-
-    /*justify-content: space-between;*/
 }
 
 .wrapOuter .icon {
@@ -1056,7 +1058,6 @@ footer .copyrightTxt{
     font-size: 18px;
     font-weight: 500;
     color: var(--color-text-base);
-    /*margin: 0 0 20px;*/
 }
 
 .wrapOuter .divider {
