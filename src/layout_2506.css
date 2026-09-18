@@ -109,6 +109,11 @@ header.isScrolled{
     vertical-align: top;
 }
 
+.logo:hover{
+    opacity: .6;
+    transition: all .8s;
+}
+
 .naviGlobal{
     display: flex;
     justify-content: flex-end;
