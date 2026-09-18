@@ -32,7 +32,7 @@ function Header() {
       <div className="topInner">
         <div className="logo">
           <a href="#" onClick={scrollToTop}>
-            <img src="img/logo-ys.svg" alt="yogo sakamoto" />
+            <img src="img/logo-ys_2.svg" alt="yogo sakamoto" />
           </a>
         </div>
         <div className="headBnr">
